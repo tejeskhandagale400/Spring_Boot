@@ -1,0 +1,16 @@
+package com.capgemini.rest.fisrtrest.restservices;
+
+import java.util.List;
+
+import com.capgemini.rest.fisrtrest.employee.Employee;
+
+
+public interface EmployeeService {
+
+	 List<Employee> getAllEmployees();
+
+	void addNewEmployee(Employee employee);
+
+	void updateEmployee(Employee employee);
+
+}

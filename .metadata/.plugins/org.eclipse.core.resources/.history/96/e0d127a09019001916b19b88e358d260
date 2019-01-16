@@ -1,0 +1,7 @@
+package com.capgemini.customer.customers;
+
+public class Customers {
+ private String id;
+ private String firstname;
+ private String lastname;
+}

@@ -1,0 +1,11 @@
+package com.capgemini.customer.repo;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+import com.capgemini.customer.customers.Customers;
+
+public interface CustomerRepo extends MongoRepository<Customers, String> {
+
+	char[] findByFirstName(String string);
+
+}

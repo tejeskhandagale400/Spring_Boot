@@ -1,0 +1,9 @@
+package com.capgemini.rest.employee;
+
+public class Address {
+
+	private int flatNo;
+	private String city;
+	private int pinCode;
+	private String state;
+}

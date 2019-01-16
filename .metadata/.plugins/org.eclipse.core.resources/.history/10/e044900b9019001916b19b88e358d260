@@ -1,0 +1,5 @@
+package com.capgemini.customer.repo;
+
+public class CustomerRepo {
+
+}

@@ -1,0 +1,5 @@
+package com.capgemini.rest.employeeResource;
+
+public class HelloWorld {
+
+}

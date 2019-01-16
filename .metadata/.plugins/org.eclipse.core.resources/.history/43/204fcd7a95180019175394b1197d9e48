@@ -1,0 +1,5 @@
+package com.capgemini.customer.customer.resource;
+
+public class CustomerResource {
+
+}

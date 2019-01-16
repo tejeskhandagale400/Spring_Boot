@@ -1,0 +1,36 @@
+package com.capgemini.rest.fisrtrest;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+
+import com.capgemini.rest.fisrtrest.employee.Address;
+import com.capgemini.rest.fisrtrest.employee.Employee;
+import com.capgemini.rest.fisrtrest.employeerepo.EmployeeRepository;
+
+@SpringBootApplication
+public class FisrtRestApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(FisrtRestApplication.class, args);
+	}
+	
+	@Bean
+	public CommandLineRunner populateData(EmployeeRepository repository) {
+		return (args)->{
+			repository.save(new Employee(101,"Shubham",1000,new Address(10, "Pali", 410205,"Maharashtra")));
+			repository.save(new Employee(102,"Tejas",1000,new Address(10, "Pali", 410205,"Maharashtra")));
+			repository.save(new Employee(103,"Tejas",1000,new Address(10, "Pali", 410205,"Maharashtra")));
+			repository.save(new Employee(104,"Tejas",1000,new Address(10, "Pali", 410205,"Maharashtra")));
+			repository.save(new Employee(105,"Tejas",1000,new Address(10, "Pali", 410205,"Maharashtra")));
+			repository.save(new Employee(106,"Tejas",1000,new Address(10, "Pali", 410205,"Maharashtra")));
+		
+		};
+		
+		
+		
+	}
+
+}
+

@@ -1,0 +1,13 @@
+package com.capgemini.rest.restservices;
+
+import com.capgemini.rest.fisrtrest.employee.Employee;
+
+import antlr.collections.List;
+
+public interface EmployeeService {
+
+	List getAllEmployees();
+
+	void addNewEmployee(Employee employee);
+
+}

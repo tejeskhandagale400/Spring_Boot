@@ -1,0 +1,27 @@
+package com.capgemini.rest.restservices;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.capgemini.rest.employee.Employee;
+
+import antlr.collections.List;
+
+@Service
+public class EmployeeServiceImpl implements EmployeeService {
+
+ @Autowired
+ 
+	@Override
+	public List getAllEmployees() {
+
+		return ;
+	}
+
+	 
+	@Override
+	public void addNewEmployee(Employee employee) {
+ 		
+	}
+
+}

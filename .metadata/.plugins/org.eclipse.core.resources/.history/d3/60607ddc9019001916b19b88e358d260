@@ -1,0 +1,12 @@
+package com.capgemini.customer.customers;
+
+import javax.persistence.Id;
+
+public class Customers {
+	@Id
+	private String id;
+	private String firstname;
+	private String lastname;
+	
+	
+}

@@ -1,0 +1,51 @@
+package com.capgemini.Customers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.capgemini.Customers.Customerss.Customerss;
+import com.capgemini.Customers.repo.CustomersRepo;
+
+@SpringBootApplication
+public class CustomersApplication implements CommandLineRunner{
+
+	@Autowired
+	private CustomersRepo repository;
+	
+	public static void main(String[] args) {
+		SpringApplication.run(CustomersApplication.class, args);
+	}
+	
+	
+
+	@Override
+	public void run(String... args) throws Exception {
+
+		repository.save(new Customerss("101", "Smith","Arrora"));
+		repository.save(new Customerss("102", "Pavan","Kumar"));
+		
+		// fetch all Customerss
+				System.out.println("Customerss found with findAll():");
+				System.out.println("-------------------------------");
+				for (Customers Customers : repository.findAll()) {
+					System.out.println(Customers);
+				}
+				System.out.println();
+
+				// fetch an individual Customers
+				System.out.println("Customers found with findByFirstName('Alice'):");
+				System.out.println("--------------------------------");
+				System.out.println(repository.findByFirstName("Alice"));
+
+				System.out.println("Customerss found with findByLastName('Smith'):");
+				System.out.println("--------------------------------");
+				for (Customers Customers : repository.findByLastName("Smith")) {
+					System.out.println(Customers);
+				}
+
+	}
+
+}
+

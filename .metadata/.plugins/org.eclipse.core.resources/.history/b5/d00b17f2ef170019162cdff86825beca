@@ -1,0 +1,26 @@
+package com.capgemini.rest.restservices;
+
+import com.capgemini.rest.employee.Employee;
+
+import antlr.collections.List;
+
+public class EmployeeServiceImpl implements EmployeeService {
+
+	/* (non-Javadoc)
+	 * @see com.capgemini.rest.restservices.EmployeeService#getAllEmployees()
+	 */
+	@Override
+	public List getAllEmployees() {
+
+		return null;
+	}
+
+	/* (non-Javadoc)
+	 * @see com.capgemini.rest.restservices.EmployeeService#addNewEmployee(com.capgemini.rest.employee.Employee)
+	 */
+	@Override
+	public void addNewEmployee(Employee employee) {
+ 		
+	}
+
+}

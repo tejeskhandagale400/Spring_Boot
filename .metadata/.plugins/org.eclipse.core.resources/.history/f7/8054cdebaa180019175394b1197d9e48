@@ -1,0 +1,32 @@
+package com.capgemini.rest.fisrtrest;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Repository;
+
+import com.capgemini.rest.fisrtrest.employee.Employee;
+import com.capgemini.rest.fisrtrest.employeerepo.EmployeeRepository;
+
+@SpringBootApplication
+public class FisrtRestApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(FisrtRestApplication.class, args);
+	}
+	
+	@Bean
+	public CommandLineRunner populateData(EmployeeRepository repository) {
+		return (args)->{
+			repository.save(new Employee(101,"Tejas",12100,
+					new Address(12,"Pali",410205,"Maharashtra")));
+			
+		}
+		
+		
+		
+	}
+
+}
+
